@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Predictor Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>✨ Attendance Predictor Pro ✨</h1>
+            <p>Stay on top of your attendance game with style</p>
+        </div>
+
+        <div class="content">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="totalClasses">📚 Total Classes Held</label>
+                    <input type="number" id="totalClasses" placeholder="Enter total classes" min="1" value="100">
+                </div>
+
+                <div class="input-group">
+                    <label for="attendedClasses">✅ Classes Attended</label>
+                    <input type="number" id="attendedClasses" placeholder="Enter attended classes" min="0" value="75">
+                </div>
+
+                <div class="input-group">
+                    <label for="requiredPercentage">🎯 Required Percentage</label>
+                    <input type="number" id="requiredPercentage" placeholder="Enter required %" min="0" max="100"
+                        value="75">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="calculateAttendance()">
+                    <span class="emoji-icon">🚀</span>Calculate
+                </button>
+                <button class="btn btn-secondary" onclick="resetForm()">
+                    <span class="emoji-icon">🔄</span>Reset
+                </button>
+            </div>
+
+            <div id="results" class="results-container">
+                <div class="stats-grid">
+                    <div class="stat-card" id="currentCard">
+                        <div class="stat-value" id="currentPercent">0%</div>
+                        <div class="stat-label">Current Percentage</div>
+                    </div>
+                    <div class="stat-card" id="statusCard">
+                        <div class="stat-value" id="statusEmoji">📊</div>
+                        <div class="stat-label" id="statusText">Status</div>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="prediction-box">
+                    <h3>📈 Predictions & Insights</h3>
+                    <div id="predictions"></div>
+                </div>
+
+                <!-- Pro Tips Info Card -->
+                <div class="info-card">
+                    <div class="info-card-title">
+                        💡 Pro Tip
+                    </div>
+                    <div class="info-card-text">
+                        Keep your attendance above 80% to have a comfortable buffer. This gives you flexibility for
+                        unexpected situations while staying well above the requirement.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9em;">
+            <p>Made with 💚 for students By Team ScriptX • Track Smart, Stay Ahead, Bunk Safely</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
